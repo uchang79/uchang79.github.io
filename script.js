@@ -3,6 +3,7 @@
 // ============================================
 const navbar = document.querySelector('.navbar');
 const navLinks = document.querySelectorAll('.nav-link');
+const logoText = document.querySelector('.nav-logo .logo-text');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -32,6 +33,24 @@ navLinks.forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+
+// Logo 클릭 시 최상단으로 스크롤
+if (logoText) {
+    logoText.style.cursor = 'pointer';
+    logoText.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        // 모바일 메뉴가 열려 있으면 닫기
+        const navMenu = document.querySelector('.nav-menu');
+        if (navMenu) {
+            navMenu.classList.remove('active');
+        }
+    });
+}
 
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
