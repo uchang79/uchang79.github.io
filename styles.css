@@ -39,6 +39,7 @@ body {
     color: var(--text-primary);
     background-color: var(--light-bg);
     overflow-x: hidden;
+    word-break: keep-all;
 }
 
 .container {
@@ -294,6 +295,11 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
     line-height: 1.8;
+}
+
+.code-content pre {
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .code-keyword { color: #c792ea; }
@@ -753,7 +759,11 @@ body {
 }
 
 .experience .title-line {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.experience .title-text {
+    color: #ffffff;
 }
 
 .timeline {
@@ -1048,6 +1058,9 @@ body {
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
+    .hero {
+        padding: 6rem 0 4rem;
+    }
     .nav-container {
         padding: 1rem 1.25rem;
     }
@@ -1077,6 +1090,40 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
         padding: 0 1.25rem;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        word-break: keep-all;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        min-height: auto;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .code-window {
+        max-width: 100%;
+        transform: scale(0.9);
+        transform-origin: center top;
+    }
+
+    .code-content {
+        font-size: 0.75rem;
+        padding: 1.2rem;
     }
 
     .hero-title {
@@ -1113,6 +1160,23 @@ body {
     }
 
     .title-line {
+        display: none;
+    }
+
+    /* Experience timeline: 모바일에서 전체 너비 사용 및 라인/마커 숨김 */
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        padding-left: 0;
+    }
+
+    .timeline-marker {
         display: none;
     }
 }

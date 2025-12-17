@@ -410,14 +410,28 @@ window.addEventListener('load', () => {
 // ============================================
 const hero = document.querySelector('.hero');
 if (hero) {
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
+    const applyParallax = () => {
+        const isDesktop = window.innerWidth > 768;
         const heroContent = hero.querySelector('.hero-content');
-        if (heroContent && scrolled < window.innerHeight) {
-            heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-            heroContent.style.opacity = 1 - scrolled / window.innerHeight;
+
+        if (!isDesktop && heroContent) {
+            // 모바일에서는 패럴랙스 효과 제거
+            heroContent.style.transform = 'none';
+            heroContent.style.opacity = 1;
+            return;
         }
-    });
+
+        if (isDesktop) {
+            const scrolled = window.pageYOffset;
+            if (heroContent && scrolled < window.innerHeight) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+                heroContent.style.opacity = 1 - scrolled / window.innerHeight;
+            }
+        }
+    };
+
+    window.addEventListener('scroll', applyParallax);
+    window.addEventListener('resize', applyParallax);
 }
 
 // ============================================
