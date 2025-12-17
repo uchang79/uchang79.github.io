@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <meta name="description" content="웹개발자 백유창 포트폴리오 - 프론트엔드 개발자">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;YUCHANG BAEK&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="particles"></canvas>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">안녕하세요,</span>
+                    <span class="name typing-text"></span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-subtitle"></span>
+                    <span class="cursor">|</span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="code-title">portfolio.js</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">'Web Developer'</span>,
+  <span class="code-property">skills</span>: [<span class="code-string">'React'</span>, <span class="code-string">'Vue'</span>, <span class="code-string">'Node.js'</span>],
+  <span class="code-property">passion</span>: <span class="code-string">'Creating amazing web experiences'</span>
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                <span class="title-text">About Me</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="about-content">
+                <div class="about-text fade-in-up">
+                    <p class="about-intro">
+                        저는 <span class="highlight">사용자 경험</span>을 중시하는 웹 개발자입니다.
+                        깔끔한 코드와 아름다운 인터페이스를 만드는 것을 좋아하며,
+                        최신 기술 트렌드를 학습하고 적용하는 것에 열정을 가지고 있습니다.
+                    </p>
+                    <p>
+                        프론트엔드 개발에 특화되어 있으며, 반응형 웹 디자인과 
+                        성능 최적화에 관심이 많습니다. 팀과의 협업을 통해 
+                        더 나은 솔루션을 만들어가는 것을 즐깁니다.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in-up">
+                    <div class="image-wrapper">
+                        <div class="image-placeholder">
+                            <img src="profile.jpg" alt="Profile photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                <span class="title-text">Skills & Technologies</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in-up">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category fade-in-up">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Express</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="78"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category fade-in-up">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Others</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">SASS</span>
+                        <span class="skill-tag">Jest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                <span class="title-text">Featured Projects</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="projects-grid">
+                <!-- 기업 홈페이지 프로젝트 -->
+                <div class="project-card fade-in-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="Live Site"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-category">Corporate Website</p>
+                        <h3 class="project-title">제조 기업 공식 홈페이지 구축</h3>
+                        <p class="project-description">
+                            제조 분야 B2B 기업의 브랜딩을 강화하기 위해 기획·디자인·개발까지 전담한 반응형 기업 홈페이지입니다.
+                            제품 소개, 문의 폼, 회사 소개 등 정보를 직관적으로 탐색할 수 있도록 IA를 설계했습니다.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive Web</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 랜딩 페이지 프로젝트 -->
+                <div class="project-card fade-in-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="Live Site"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-category">Landing Page</p>
+                        <h3 class="project-title">마케팅 캠페인 랜딩 페이지</h3>
+                        <p class="project-description">
+                            신규 서비스 런칭을 위한 마케팅 랜딩 페이지로, 스크롤 애니메이션과 섹션별 하이라이트를 통해
+                            전환율을 높이는 데 집중한 단일 페이지 애플리케이션입니다.
+                        </p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>GSAP</span>
+                            <span>SPA</span>
+                            <span>Animation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 쇼핑몰 프로젝트 -->
+                <div class="project-card fade-in-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="Live Site"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link" aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-category">E-commerce</p>
+                        <h3 class="project-title">소규모 브랜드 쇼핑몰 구축</h3>
+                        <p class="project-description">
+                            소규모 패션 브랜드를 위한 쇼핑몰로, 상품 리스트, 상세 페이지, 장바구니, 주문 흐름까지
+                            전체 UX 플로우를 설계하고 프론트엔드를 구현했습니다.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>REST API</span>
+                            <span>SPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                <span class="title-text">Experience</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="timeline">
+                <!-- 1. 프리랜서 메인 경력 (2019 - 현재) -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - Present</div>
+                        <h3 class="timeline-title">Freelance Web Developer</h3>
+                        <h4 class="timeline-company">Freelance / Remote</h4>
+                        <p class="timeline-description">
+                            2019년부터 현재까지 프리랜서로 활동하며 다양한 산업의 웹사이트를 기획부터 배포까지 end-to-end로 구축하고 있습니다.
+                            기업 홈페이지, 랜딩 페이지, 쇼핑몰, 포트폴리오 사이트 등 여러 형태의 프로젝트를 맡아
+                            사용성과 퍼포먼스를 모두 고려한 웹 서비스를 만드는 데 집중하고 있습니다.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>중소기업·브랜드 홈페이지, 캠페인 랜딩 페이지, 관리자 대시보드 등 다수의 실서비스 구축</li>
+                            <li>디자인 시안(Figma/PSD) 기반 반응형 웹 퍼블리싱 및 프론트엔드 개발</li>
+                            <li>최적화(로딩 속도, 이미지/리소스 관리)와 SEO를 고려한 구조 설계</li>
+                            <li>클라이언트 요구사항 정의, 일정/범위 조율, 유지보수까지 전 과정 직접 담당</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. 웹 에이전시 / 다양한 프로젝트 경험 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2015 - 2019</div>
+                        <h3 class="timeline-title">Web Developer</h3>
+                        <h4 class="timeline-company">디지털 에이전시</h4>
+                        <p class="timeline-description">
+                            여러 기업/브랜드 웹사이트와 캠페인 페이지를 제작하며
+                            다양한 도메인의 UI/UX와 퍼블리싱 경험을 쌓았습니다.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>반응형 웹, 랜딩 페이지, 기업 사이트 등 30+ 프로젝트 구축</li>
+                            <li>애니메이션과 인터랙션을 활용한 마케팅 페이지 개발</li>
+                            <li>디자이너, 마케터와의 협업을 통한 요구사항 분석 및 구현</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. 프리랜서 & 사이드 프로젝트 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2012 - 2015</div>
+                        <h3 class="timeline-title">Freelance Web Developer</h3>
+                        <h4 class="timeline-company">Freelance / Side Projects</h4>
+                        <p class="timeline-description">
+                            다양한 소규모 웹사이트와 개인 프로젝트를 진행하며
+                            클라이언트 커뮤니케이션부터 배포까지 전 과정을 직접 경험했습니다.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>소상공인, 개인 브랜드 웹사이트 제작 및 유지보수</li>
+                            <li>jQuery, Vanilla JS 기반 인터랙션 구현</li>
+                            <li>호스팅, 도메인 설정, 기본 서버 관리 경험</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. 웹 개발 입문 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2010 - 2012</div>
+                        <h3 class="timeline-title">Web Development Beginner / Student</h3>
+                        <h4 class="timeline-company">개인 학습 & 학교 프로젝트</h4>
+                        <p class="timeline-description">
+                            HTML, CSS, JavaScript를 처음 접하고 웹의 구조와 동작 원리를 이해하기 시작한 시기입니다.
+                            학교 과제와 개인 실험 프로젝트를 통해 웹 개발의 기초를 다졌습니다.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>HTML/CSS 기반 정적 페이지 제작 및 레이아웃 연습</li>
+                            <li>간단한 JavaScript 기능(슬라이더, 탭, 모달 등) 구현</li>
+                            <li>Git, GitHub를 활용한 버전 관리 기초 학습</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05.</span>
+                <span class="title-text">Get In Touch</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in-up">
+                    <h3>Let's work together!</h3>
+                    <p>
+                        새로운 프로젝트나 협업 기회에 대해 이야기하고 싶으시다면
+                        언제든지 연락주세요. 빠르게 답변드리겠습니다.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:your.email@example.com">uchang79@naver.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+821012345678">+82 10-9117-4410</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Seoul, South Korea</span><br>
+                                <span>Thailand</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <form class="contact-form fade-in-up" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Phone Number</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Web Developer YUCHANG Portfolio. Built with <i class="fas fa-heart"></i> and modern web technologies.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS (클라이언트 사이드 이메일 전송) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
